@@ -7,15 +7,16 @@
  */
 
 import React from 'react';
-import {SafeAreaView, View, StatusBar, Text} from 'react-native';
+import {StatusBar} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import HomePage from './src/UI1/HomePage';
 
 const App = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaProvider>
       <StatusBar />
       <HomePage />
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 
