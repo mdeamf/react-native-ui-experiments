@@ -1,8 +1,10 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {ScrollView, Text} from 'react-native';
+import {ScrollView} from 'react-native';
+
 import Header from './Header';
 import User from './User';
+import Search from './Search';
 
 const HomePage = () => {
   return (
@@ -10,6 +12,7 @@ const HomePage = () => {
       <ScrollView contentContainerStyle={{padding: 24}}>
         <Header />
         <User />
+        <Search />
       </ScrollView>
     </SafeAreaView>
   );
