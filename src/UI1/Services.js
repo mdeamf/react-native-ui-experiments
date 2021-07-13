@@ -1,68 +1,87 @@
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View, StyleSheet} from 'react-native';
 
 const items = [
   {
     icon: ['fas', 'coins'],
     key: 'Transações',
     color: '#01cd88',
+    info: '7 pagamentos',
   },
   {
     icon: ['fas', 'hand-holding-usd'],
     key: 'Conta',
     color: '#ff5949',
+    info: '4 serviços',
   },
   {
     icon: ['fas', 'star'],
     key: 'Pontos',
     color: '#e7a849',
+    info: '250 pontos',
   },
   {
     icon: ['fas', 'credit-card'],
     key: 'Cartões',
     color: '#2f26d9',
+    info: '3 cartões',
   },
 ];
 
 const Services = () => {
   return (
-    <View style={{flexDirection: 'row', flexWrap: 'wrap', marginTop: 16}}>
+    <View style={styles.container}>
       {items.map(item => (
         <TouchableOpacity
+          key={item.key}
           onPress={() => console.log('test')}
-          style={{
-            flexGrow: 1,
-            flexShrink: 1,
-            flexBasis: '25%',
-            padding: 16,
-            margin: 16,
-            backgroundColor: item.color,
-            borderRadius: 8,
-          }}>
+          style={styles.serviceItem(item)}>
           <View>
-            <View
-              style={{
-                alignSelf: 'flex-start',
-                padding: 12,
-                borderRadius: 50,
-                backgroundColor: 'white',
-              }}>
+            <View style={styles.serviceIcon}>
               <FontAwesomeIcon size={18} color={item.color} icon={item.icon} />
             </View>
-            <Text
-              style={{
-                color: '#fff',
-                marginTop: 8,
-                fontFamily: 'OpenSans-Regular',
-              }}>
-              {item.key}
-            </Text>
+            <Text style={styles.serviceTitle}>{item.key}</Text>
+            <Text style={styles.serviceInfo}>{item.info}</Text>
           </View>
         </TouchableOpacity>
       ))}
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginTop: 16,
+  },
+  serviceItem: item => ({
+    flexGrow: 1,
+    flexShrink: 1,
+    flexBasis: '25%',
+    padding: 16,
+    margin: 16,
+    backgroundColor: item.color,
+    borderRadius: 8,
+  }),
+  serviceIcon: {
+    alignSelf: 'flex-start',
+    padding: 12,
+    borderRadius: 50,
+    backgroundColor: 'white',
+  },
+  serviceTitle: {
+    color: '#fff',
+    marginTop: 8,
+    fontFamily: 'OpenSans-Regular',
+  },
+  serviceInfo: {
+    color: '#fff',
+    opacity: 0.6,
+    fontSize: 11,
+    fontFamily: 'OpenSans-SemiBold',
+  },
+});
 
 export default Services;
