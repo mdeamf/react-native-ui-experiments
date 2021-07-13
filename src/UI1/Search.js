@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 0,
     borderBottomWidth: 0,
     padding: 0,
-    marginTop: 32,
+    marginTop: 24,
   },
   searchBarInput: {
     backgroundColor: '#eff1ff',
