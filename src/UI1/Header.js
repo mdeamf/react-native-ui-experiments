@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   menu: {
-    backgroundColor: '#eff1ff',
+    backgroundColor: '#eeeeee',
     padding: 16,
     borderRadius: 50,
   },

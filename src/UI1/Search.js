@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     marginTop: 24,
   },
   searchBarInput: {
-    backgroundColor: '#eff1ff',
+    backgroundColor: '#eeeeee',
   },
 });
 
