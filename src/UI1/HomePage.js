@@ -6,6 +6,7 @@ import Header from './Header';
 import User from './User';
 import Search from './Search';
 import Services from './Services';
+import Actions from './Actions';
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
         <User />
         <Search />
         <Services />
+        <Actions />
       </ScrollView>
     </SafeAreaView>
   );
