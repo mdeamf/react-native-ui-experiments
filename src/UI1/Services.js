@@ -1,4 +1,5 @@
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {Text, TouchableOpacity, View, StyleSheet} from 'react-native';
 
@@ -8,6 +9,7 @@ const items = [
     key: 'Transações',
     color: '#01cd88',
     info: '7 pagamentos',
+    route: 'Transaction',
   },
   {
     icon: ['fas', 'hand-holding-usd'],
@@ -30,12 +32,16 @@ const items = [
 ];
 
 const Services = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       {items.map(item => (
         <TouchableOpacity
           key={item.key}
-          onPress={() => console.log('test')}
+          onPress={() =>
+            item.route ? navigation.navigate(item.route) : console.log('test')
+          }
           style={styles.serviceItem(item)}>
           <View>
             <View style={styles.serviceIcon}>
