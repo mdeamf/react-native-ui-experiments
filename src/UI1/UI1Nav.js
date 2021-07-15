@@ -6,7 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {enableScreens} from 'react-native-screens';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import HomePage from './HomePage';
+import HomePage from './Home/HomePage';
 import TransactionPage from './TransactionPage';
 
 enableScreens();

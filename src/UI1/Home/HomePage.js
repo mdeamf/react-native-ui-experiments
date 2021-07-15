@@ -2,11 +2,11 @@ import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {ScrollView} from 'react-native';
 
-import Header from './Header';
-import User from './User';
-import Search from './Search';
-import Services from './Services';
-import Actions from './Actions';
+import Header from './Components/Header';
+import User from './Components/User';
+import Search from './Components/Search';
+import Services from './Components/Services';
+import Actions from './Components/Actions';
 
 const HomePage = () => {
   return (
