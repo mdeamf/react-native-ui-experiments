@@ -7,7 +7,7 @@ import {enableScreens} from 'react-native-screens';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import HomePage from './Home/HomePage';
-import TransactionPage from './TransactionPage';
+import TransactionPage from './Transaction/TransactionPage';
 
 enableScreens();
 const Stack = createStackNavigator();
@@ -37,6 +37,7 @@ const StackScreenOptionsHeader = (navigation, route) => ({
     elevation: 0,
     borderBottomColor: 'transparent',
     shadowColor: 'transparent',
+    height: 80
   },
   headerLeft: () => (
     <HeaderContent navigation={navigation} icon="chevron-left" />
@@ -49,7 +50,9 @@ const HeaderBase = props => {
   return (
     <TouchableOpacity
       style={{
-        margin: 24,
+        marginHorizontal: 24,
+        marginTop: 24,
+        marginBottom: 8,
       }}
       onPress={() => props.navigation.goBack()}>
       {props.children}

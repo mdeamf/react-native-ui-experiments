@@ -2,12 +2,12 @@ import React from 'react';
 
 import {View, Text} from 'react-native';
 
-const ExtractPage = () => {
+const Deposits = () => {
   return (
-    <View style={{backgroundColor: '#2f26d9', flex: 1}}>
+    <View>
       <Text>Teste</Text>
     </View>
   );
 };
 
-export default ExtractPage;
+export default Deposits;
